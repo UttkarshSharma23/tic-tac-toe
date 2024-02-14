@@ -35,14 +35,15 @@ const Game = () => {
   })
 
   return (
-    <div className=' flex h-screen items-center justify-center gap-8'>
-      {/*Game Board  */}
+    <div className="flex h-screen items-center justify-center gap-8">
+      {/* Game Board */}
       <div>
         <Board xIsNext={xIsNext} squares={currentSqaures} onPlay={handlePlay} />
       </div>
       {/* History Info */}
-      <div>
-        <ol>{moves}</ol>
+      <div className="text-center">
+        <h2 className="text-xl font-bold mb-4">Game History</h2>
+        <ol className="list-decimal">{moves}</ol>
       </div>
     </div>
   )
